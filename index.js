@@ -44,7 +44,7 @@ async function commonForTwo({ files, entrypoint, workPath, cachePath }) {
             'rollup-plugin-terser': '3.0.0',
           },
           scripts: {
-            tsc: `tsc --lib esnext,dom --moduleResolution node --target es6 ${path.join(
+            tsc: `tsc --lib esnext,dom --moduleResolution node --target es6 --allowSyntheticDefaultImports ${path.join(
               '../user',
               entrypoint
             )}`,
